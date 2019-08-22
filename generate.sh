@@ -10,13 +10,13 @@ export LC_ALL=C.UTF-8
 export LANG=C.UTF-8
 
 # Install requirments
-apt update -q && apt install -q -y python3 python3-pip python3-venv unzip
+apt update > /dev/null && apt install -y python3 python3-pip python3-venv unzip > /dev/null
 go get -u github.com/aktau/github-release
 
 # Create Python venv
 python3 -m venv env
 source env/bin/activate
-pip3 install doc2dash
+pip3 install doc2dash > /dev/null
 
 # Download docs
 wget -q "https://readthedocs.org/projects/$doc/downloads/htmlzip/latest/" -O docs.zip
