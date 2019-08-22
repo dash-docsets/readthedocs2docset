@@ -8,7 +8,7 @@ current_dir=`echo $(pwd)`
 doc=$1
 
 # Install requirments
-apt update -q && apt install -q -y python3 python3-pip python3-venv
+apt update -q && apt install -q -y python3 python3-pip python3-venv unzip
 go get -u github.com/aktau/github-release
 
 # Create Python venv
