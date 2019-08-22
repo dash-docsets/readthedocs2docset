@@ -6,6 +6,8 @@
 # Variables
 current_dir=`echo $(pwd)`
 doc=$1
+export LC_ALL=C.UTF-8
+export LANG=C.UTF-8
 
 # Install requirments
 apt update -q && apt install -q -y python3 python3-pip python3-venv unzip
